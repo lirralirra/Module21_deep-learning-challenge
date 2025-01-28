@@ -1,8 +1,6 @@
-# Module21_deep-learning-challenge
+# Module21_deep-learning-challenge - Neural Network Model Report: Alphabet Soup
 
-## Neural Network Model Report: Alphabet Soup
-
-Overview of the Analysis
+## Overview of the Analysis
 
 The purpose of this analysis was to build a deep learning model to predict whether applicants for funding by Alphabet Soup 
 are likely to be successful. Using a dataset of historical funding data, the model aimed to identify key patterns and 
@@ -11,13 +9,13 @@ resources more effectively.
 
 ## Results
 
-Data Preprocessing
+### Data Preprocessing
 
-### Target Variable:
+#### Target Variable:
 
 The target variable for the model is the IS_SUCCESSFUL column, which indicates whether a funding application was successful (1) or not (0).
 
-### Features:
+#### Features:
 
 The feature variables include the remaining columns after preprocessing, such as:
 
@@ -37,7 +35,7 @@ ASK_AMT
 
 categorical variables converted into dummy variables via one-hot encoding.
 
-### Removed Variables:
+#### Removed Variables:
 
 Variables that were removed because they are neither features nor targets:
 
