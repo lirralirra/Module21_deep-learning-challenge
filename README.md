@@ -1,4 +1,4 @@
-# Module21_deep-learning-challenge - Neural Network Model Report: Alphabet Soup
+# Module21_ Neural Network Model Report: Alphabet Soup
 
 ## Overview of the Analysis
 
@@ -43,19 +43,20 @@ EIN and NAME—Identification columns
 
 ### Compiling, Training, and Evaluating the Model
 
-Neurons, Layers, and Activation Functions:
+#### Neurons, Layers, and Activation Functions:
 
 The neural network model consisted of:
 
-Input Layer: Matching the number of input features after one-hot encoding (~40 features).
+**Input Layer:** Matching the number of input features after one-hot encoding (~40 features).
 
-Hidden Layers:
+**Hidden Layers:**
 
-Layer 1: 80 neurons with ReLU activation to handle complex relationships.
+Layer 1: 80 neurons with ReLU activation to handle complex relationships, about 2 times the number of features
 
-Layer 2: 40 neurons with ReLU activation to further refine patterns.
+Layer 2: 40 neurons with ReLU activation to further refine patterns, 
+to continue processing the data while avoiding overfitting by gradually reducing complexity.
 
-Output Layer: 1 neuron with a sigmoid activation function for binary classification.
+**Output Layer:** 1 neuron with a sigmoid activation function for binary classification.
 
 Rationale: ReLU was selected for the hidden layers due to its efficiency in avoiding vanishing gradients, 
 and sigmoid was used in the output layer as it is appropriate for binary classification problems.
@@ -63,17 +64,38 @@ Model Performance:
 
 The target model accuracy was set at 75%.
 
-The achieved accuracy was approximately 72%, falling slightly short of the goal.
+The achieved accuracy was approximately 72.43% (my_model.h5), falling slightly short of the goal.
 
 
 ### Steps to Improve Performance:
 
-Adjusted the number of neurons and layers to balance complexity and overfitting.
+Increase the number of neurons and layers to balance complexity and overfitting.
 
 Tested different batch sizes (e.g., 32, 64) and epochs (e.g., 50, 100, 200).
 
-Applied dropout regularization to reduce overfitting.
+Drop extreme imbalance features : SPECIAL_CONSIDERATIONS, STATUS
 
-Normalized input data to improve convergence.
+Creating more bins for rare occurrences in columns: APPLICATION_TYPE,CLASSIFICATION
 
-Explored additional feature engineering by grouping certain categories.
+Binning and transform skew feature : ASK_AMT
+
+The optimisation model achieved accuracy was approximately 72.38% (my_model_optimisation.h5), 
+still falling slightly short of the goal.
+
+### Summary
+
+The deep learning model provided reasonable accuracy (72%), indicating its potential for predicting successful funding 
+applications. 
+However, it fell slightly short of the target performance. Based on the results, alternative approaches could be 
+explored to enhance predictive accuracy.
+
+Recommendation for Alternative Model:
+
+A random forest classifier or gradient boosting machine (e.g., XGBoost) could be used. These models often perform 
+well with structured data and provide feature importance insights.
+
+Rationale: Tree-based models handle categorical data and non-linear relationships effectively and might achieve 
+higher accuracy without extensive preprocessing.
+
+This analysis demonstrates the potential of machine learning to improve decision-making in funding allocation 
+but suggests further optimization or alternative modeling techniques to achieve optimal results.
