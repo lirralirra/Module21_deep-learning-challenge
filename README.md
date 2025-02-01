@@ -66,8 +66,7 @@ The target model accuracy was set at 75%.
 
 The achieved accuracy was approximately 72.43% (my_model.h5), falling slightly short of the goal.
 
-
-### Steps to Improve Performance:
+### Optimisation1 -Steps to Improve Performance:
 
 Increase the number of neurons and layers to balance complexity and overfitting.
 
@@ -82,6 +81,18 @@ Binning and transform skew feature : ASK_AMT
 The optimisation model achieved accuracy was approximately 72.38% (my_model_optimisation.h5), 
 still falling slightly short of the goal.
 
+### Optimisation2 -Steps to Improve Performance:
+
+ Selected the 10 most important features using Random Forest.
+
+ Used ensemble models combining Random Forest and Neural Network.
+
+ Performed hyperparameter tuning.
+
+ Result: Achieved accuracy of approximately 70.1% (my_model_optimisation_2_ensemble).
+
+
+
 ### Summary
 
 The deep learning model provided reasonable accuracy (72%), indicating its potential for predicting successful funding 
@@ -91,7 +102,7 @@ explored to enhance predictive accuracy.
 
 Recommendation for Alternative Model:
 
-A random forest classifier or gradient boosting machine (e.g., XGBoost) could be used. These models often perform 
+A gradient boosting machine (e.g., XGBoost) could be used. These models often perform 
 well with structured data and provide feature importance insights.
 
 Rationale: Tree-based models handle categorical data and non-linear relationships effectively and might achieve 
